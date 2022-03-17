@@ -79,6 +79,7 @@ struct lock {
 	struct wchan *lock_wchan;
         struct spinlock lock;
 	struct thread lock_holder;
+	volatile unsigned lock_count;
 	   /* Deadlock detector hook. */
         // add what you need here
         // (don't forget to mark things volatile as needed)
